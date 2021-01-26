@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+
+    <!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<meta name="author" content="李林静" />
+
+
+
+<meta name="description" content="想写下前端的自动定制报表UI，觉得vue不错，就想玩一下，谁知道在win上安装那么麻烦，问题不断，最后终于解决了（网上资料鱼龙混杂，还是要带脑子解决问题才行）。详细安装步骤如下：">
+<meta name="keywords">
+<meta property="og:type" content="article">
+<meta property="og:title" content="windows10安装vue.js">
+<meta property="og:url" content="https://llinjing.github.io/2017/09/27/vue/vue_install/index.html">
+<meta property="og:site_name" content="李林静的官方博客">
+<meta property="og:description" content="想写下前端的自动定制报表UI，觉得vue不错，就想玩一下，谁知道在win上安装那么麻烦，问题不断，最后终于解决了（网上资料鱼龙混杂，还是要带脑子解决问题才行）。详细安装步骤如下：">
+<meta property="og:image" content="https://llinjing.github.io/img/vue/238555602663002408.jpg">
+<meta property="og:image" content="https://llinjing.github.io/img/vue/20170927103933.png">
+<meta property="og:image" content="https://llinjing.github.io/img/vue/20170927104442.png">
+<meta property="og:image" content="https://llinjing.github.io/img/vue/20170927105040.png">
+<meta property="og:image" content="https://llinjing.github.io/img/vue/20170927105152.png">
+<meta property="og:image" content="https://llinjing.github.io/img/vue/20170927105347.png">
+<meta property="og:image" content="https://llinjing.github.io/img/vue/20170927144838.png">
+<meta property="og:image" content="https://llinjing.github.io/img/vue/20170927145044.png">
+<meta property="og:image" content="https://llinjing.github.io/img/vue/20170927144950.png">
+<meta property="og:updated_time" content="2017-09-27T07:24:18.601Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="windows10安装vue.js">
+<meta name="twitter:description" content="想写下前端的自动定制报表UI，觉得vue不错，就想玩一下，谁知道在win上安装那么麻烦，问题不断，最后终于解决了（网上资料鱼龙混杂，还是要带脑子解决问题才行）。详细安装步骤如下：">
+<meta name="twitter:image" content="https://llinjing.github.io/img/vue/238555602663002408.jpg">
+
+<link rel="apple-touch-icon" href= "/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="李林静的官方博客" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/favicon.png">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>windows10安装vue.js | 李林静的官方博客</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: true
+    }
+</script>
+
+
+    <script> yiliaConfig.jquery_ui = [false]; </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
+
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay">
+<!-- <script charset="Shift_JIS" src="http://chabudai.sakura.ne.jp/blogparts/honehoneclock/honehone_clock_tr.js"></script> -->
+</div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+
+        <a href="/" class="profilepic">
+            <img src="/img/avatar.png" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">李林静</a></h1>
+        </hgroup>
+
+        
+        <p class="header-subtitle">有点伤感的喵喵</p>
+        
+
+        
+            <form id="search-form">
+            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="false" />
+            <i class="fa fa-times" onclick="resetSearch()"></i>
+            </form>
+            <div id="local-search-result"></div>
+            <p class='no-result'>No results found <i class='fa fa-spinner fa-pulse'></i></p>
+        
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>Menu</li>
+                        <li>Tags</li>
+                        
+                        <li>Friends</li>
+                        
+                        
+                        <li>About Me</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                            <li><a href="/test.html">测试</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" href="/1597850078@qq.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" href="#" title="GitHub"></a>
+                            
+                                <a class="fa QQ" href="/1597850078" title="QQ"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/OLAP/">OLAP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Photoshop/">Photoshop</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/awk/">awk</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dashboard/">dashboard</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/druid/">druid</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/druid-io/">druid.io</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github-pages/">github pages</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/grep/">grep</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/maven/">maven</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pom/">pom</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/share-nothing/">share nothing</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tar/">tar</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tranquility/">tranquility</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/yelee/">yelee</a></li></ul>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://hexo.io">Hexo</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://pages.github.com/">GitHub</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://druid.io">Druid</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">每天进步一点点</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">李林静</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/avatar.png" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">李林静</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">有点伤感的喵喵</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                    <li><a href="/test.html">测试</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="/1597850078@qq.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" target="_blank" href="#" title="GitHub"></a>
+                            
+                                <a class="fa QQ" target="_blank" href="/1597850078" title="QQ"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
+</nav>
+      <div class="body-wrap"><article id="post-vue/vue_install" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/09/27/vue/vue_install/" class="article-date">
+      <time datetime="2017-09-27T02:38:04.438Z" itemprop="datePublished">2017-09-27</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      windows10安装vue.js
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><div align="left"><br>    <img src="/img/vue/238555602663002408.jpg" width="600" height="400" alt=""><br></div><br>想写下前端的自动定制报表UI，觉得vue不错，就想玩一下，谁知道在win上安装那么麻烦，问题不断，最后终于解决了（网上资料鱼龙混杂，还是要带脑子解决问题才行）。详细安装步骤如下：</p>
+<ul>
+<li><a id="more"></a>
+</li>
+</ul>
+<h2 id="总括"><a href="#总括" class="headerlink" title="总括"></a>总括</h2><p>避免我写的比较啰嗦，这里是所有的安装步骤，想看详细的，可以跳过这里。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">到https://nodejs.org/zh-cn/ 下载安装nodejs</div><div class="line">npm install -g cnpm --registry=http://registry.npm.taobao.org</div><div class="line">cnpm install vue</div><div class="line">cnpm install --global vue-cli</div></pre></td></tr></table></figure></p>
+<h2 id="详细步骤"><a href="#详细步骤" class="headerlink" title="详细步骤"></a>详细步骤</h2><h3 id="1-安装nodejs"><a href="#1-安装nodejs" class="headerlink" title="1.安装nodejs"></a>1.安装nodejs</h3><p>windows的在官网上下载，地址<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">https://nodejs.org/zh-cn/</div></pre></td></tr></table></figure></p>
+<p>我安装的是下图中的版本:<br><img src="/img/vue/20170927103933.png" alt="GitHub Logo"></p>
+<p>下载以后，双击安装，npm也会同时安装好的。</p>
+<h3 id="2-安装cnpm"><a href="#2-安装cnpm" class="headerlink" title="2.安装cnpm"></a>2.安装cnpm</h3><p>使用npm就行vue的安装，总是会出现各种问题，干脆放弃，直接用cnpm<br>安装方法，在cmd中执行下面的命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g cnpm --registry=http://registry.npm.taobao.org</div></pre></td></tr></table></figure></p>
+<p>等待。。。。。</p>
+<p>出现下图，表示安装ok<br><img src="/img/vue/20170927104442.png" alt="GitHub Logo"></p>
+<h3 id="3-安装vue"><a href="#3-安装vue" class="headerlink" title="3.安装vue"></a>3.安装vue</h3><p>执行命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cnpm install vue</div></pre></td></tr></table></figure></p>
+<p>安装好以后，如下图：<br><img src="/img/vue/20170927105040.png" alt="GitHub Logo"></p>
+<p>有个问题，这个安装好以后，执行vue会出现下图：<br><img src="/img/vue/20170927105152.png" alt="GitHub Logo"></p>
+<p>这个我直接忽略了，继续安装vue-cli</p>
+<h3 id="4-安装vue-cli"><a href="#4-安装vue-cli" class="headerlink" title="4.安装vue-cli"></a>4.安装vue-cli</h3><p>执行命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cnpm install --global vue-cli</div></pre></td></tr></table></figure></p>
+<p>安装成功的图：<br><img src="/img/vue/20170927105347.png" alt="GitHub Logo"></p>
+<p>好了，到这里，就可以愉快地使用了，心好累。。。。。</p>
+<p>记得上面那个问题吗？？解决了，安装个client，就解决了，好无语，等待大神告诉为什么- _ -</p>
+<h2 id="创建基于webpack的vue-project"><a href="#创建基于webpack的vue-project" class="headerlink" title="创建基于webpack的vue project"></a>创建基于webpack的vue project</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">vue init webpack vue_test</div><div class="line">cd vue_test</div><div class="line">cnpm install</div></pre></td></tr></table></figure>
+<p><img src="/img/vue/20170927144838.png" alt="GitHub Logo"></p>
+<h2 id="运行vue-project"><a href="#运行vue-project" class="headerlink" title="运行vue project"></a>运行vue project</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cnpm run dev</div></pre></td></tr></table></figure>
+<p><img src="/img/vue/20170927145044.png" alt="GitHub Logo"><br><img src="/img/vue/20170927144950.png" alt="GitHub Logo"></p>
+<h2 id="发布"><a href="#发布" class="headerlink" title="发布"></a>发布</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cnpm run build</div></pre></td></tr></table></figure>
+<p>发布以后会生成一个dist文件夹，可以直接拿这个文件是发布项目</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>Title:</span><a href="/2017/09/27/vue/vue_install/">windows10安装vue.js</a></p>
+        <p><span>Author:</span><a href="/" title="Back to Homepage">李林静</a></p>
+        <p><span>Created:</span>2017-09-27, 10:38:04</p>
+        <p><span>Updated:</span>2017-09-27, 15:24:18</p>
+        <p>
+            <span>Full URL:</span><a class="post-url" href="/2017/09/27/vue/vue_install/" title="windows10安装vue.js">https://llinjing.github.io/2017/09/27/vue/vue_install/</a>
+            <span class="copy-path" data-clipboard-text="From https://llinjing.github.io/2017/09/27/vue/vue_install/　　By 李林静" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>License:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"CC BY-NC-SA 4.0"</a> Keep Link &amp; Author if Distribute.
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2017/09/25/vue/mvc/">
+                    MVC，MVP 和 MVVM 的图示
+                </a>
+            </div>
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2017/09/27/vue/vue_webpack/">
+                    vue webpack project 介绍
+                </a>
+            </div>
+        
+    </nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">Contents</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#总括"><span class="toc-number">1.</span> <span class="toc-text">总括</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#详细步骤"><span class="toc-number">2.</span> <span class="toc-text">详细步骤</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-安装nodejs"><span class="toc-number">2.1.</span> <span class="toc-text">1.安装nodejs</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-安装cnpm"><span class="toc-number">2.2.</span> <span class="toc-text">2.安装cnpm</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-安装vue"><span class="toc-number">2.3.</span> <span class="toc-text">3.安装vue</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-安装vue-cli"><span class="toc-number">2.4.</span> <span class="toc-text">4.安装vue-cli</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#创建基于webpack的vue-project"><span class="toc-number">3.</span> <span class="toc-text">创建基于webpack的vue project</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#运行vue-project"><span class="toc-number">4.</span> <span class="toc-text">运行vue project</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#发布"><span class="toc-number">5.</span> <span class="toc-text">发布</span></a></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="Hide"  title="Show or Hide Table of Contents">
+
+    <script>
+        yiliaConfig.toc = ["Hide", "Show", !!"false"];
+    </script>
+
+
+
+
+
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2017/09/25/vue/mvc/" title="Pre: MVC，MVP 和 MVVM 的图示">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2017/09/27/vue/vue_webpack/" title="Next: vue webpack project 介绍">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/09/27/vue/vue_webpack/">vue webpack project 介绍</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/09/27/vue/vue_install/">windows10安装vue.js</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/09/25/vue/mvc/">MVC，MVP 和 MVVM 的图示</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08/14/linux/python_install/">centos 6.3 python 2.6版本升级到2.7</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08/09/kafka/operate/">kafka基本操作</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08/09/kafka/delete_topic/">解决kafka topic 删除重建后，状态依旧为删除的问题</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/15/xshell5/">xhell5 激活</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/09/pom/">maven pom配置详解</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/08/dashboard/dashboard/">Dashboard使用说明</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/05/plan/">学习计划</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/05/linux/file/">Linux文件解压和压缩语法总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/04/file/file/">Linux文件操作</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/04/ps/ps/">ps学习</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/02/druid/druid_book_read/">druid书--阅读笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/28/hexo_yufa/">Hexo-Yelee 使用语法总结及注意</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/26/druid_single_machine/">druid.io历史最详细单机搭建流程</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/26/blog_create/">hexo+github搭建博客步骤</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/26/hello-world/">初识</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i> 
+                2017 李林静
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank" title="A fast, simple &amp; powerful blog framework">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="Another simple and elegant theme for Hexo  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" title="Site Visitors"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>| </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit"  title="Page Hits"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 5;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="Back to Top"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="Comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="Go to Bottom"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+            
+            
+            
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
+</html>
